@@ -22,6 +22,7 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.1.3",
     "ergo-lib-wasm-browser": "^0.14.0",
+    "ergonames-tx-lib": "^0.1.1",
     "firebase": "^6.0.4",
     "is_js": "^0.9.0",
     "json-bigint": "^1.0.0",
