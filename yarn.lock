@@ -5342,10 +5342,10 @@ ergo-lib-wasm-browser@^0.19.0:
   resolved "https://registry.yarnpkg.com/ergo-lib-wasm-browser/-/ergo-lib-wasm-browser-0.19.0.tgz#7d82bdccda61caf1401d12fc108f1ed68058727c"
   integrity sha512-ZJo/rLVa2FMA/hS1Ckq6uxz3DO9foBuUeUOyVJLgyTGJ4/KeTLjQS3nu6ZmWAyuBIJ2LT6gJtNAj2Y79tmC8mQ==
 
-ergonames-tx-lib@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ergonames-tx-lib/-/ergonames-tx-lib-0.1.1.tgz#25017599b405a231a3bee35e243a65ac14c65d67"
-  integrity sha512-lebTYzeI6uLjRxWvztc9I6pj4Knq/j32xj8tCVSWhOWk3noFIgmNJF0fyYuFPcIL6/JgHT9mo6fzhGw6MBR9xA==
+ergonames-tx-lib@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/ergonames-tx-lib/-/ergonames-tx-lib-0.2.3.tgz#bb8849afd8e18144b716a6f03815252dd61b7c2a"
+  integrity sha512-t5sXhFQzRKfXg0EatAi5vcLnzMEsLtWtjrX67EJm7tFDe5DtAvhZTWq3sUvEyN0DMKlo+ENUdg3pnXHWoa3Vqg==
   dependencies:
     assert "^2.0.0"
     buffer "^6.0.3"

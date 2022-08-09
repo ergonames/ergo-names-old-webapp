@@ -58,9 +58,9 @@ const ergonamesTxLib = import('ergonames-tx-lib')
 //   )
 // }
 
-async function send(amount) {
+async function send(ergonamePrice, ergonameName, recieverAddress) {
   const lib = await ergonamesTxLib
-  await lib.send_transaction(amount)
+  await lib.send_transaction(ergonamePrice, ergonameName, recieverAddress)
 }
 
 export default {
@@ -101,7 +101,15 @@ export default {
       event.preventDefault()
       // ================================= Send money ============================
       const amountToBeSent = 100000000
-      await send(amountToBeSent)
+      // eslint-disable-next-line
+      ergoConnector.nautilus.connect().then(async () => {
+          // eslint-disable-next-line
+        const addr = ergo.get_change_address()
+          await send(amountToBeSent, this.form.ergoName, addr)
+        })
+        .catch(() => {
+          console.log('Cannot send transaction')
+        })
     },
     onReset(event) {
       event.preventDefault()
