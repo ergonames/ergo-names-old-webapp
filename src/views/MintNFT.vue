@@ -48,6 +48,8 @@
 
 <script>
 import { mapState } from 'vuex'
+// eslint-disable-next-line
+import { resolve_ergoname } from 'ergonames'
 
 const ergonamesTxLib = import('ergonames-tx-lib')
 
@@ -92,10 +94,17 @@ export default {
   },
   computed: mapState('app', ['appTitle']),
   methods: {
-    checkAvailability(event) {
+    async checkAvailability(event) {
       event.preventDefault()
-      this.ergoNameAvailable = true
-      this.ergoNameUnavailable = false
+      // eslint-disable-next-line
+      let resolvedErgoName = await resolve_ergoname(this.form.ergoName)
+      if (resolvedErgoName == null) {
+        this.ergoNameAvailable = true
+        this.ergoNameUnavailable = false
+      } else {
+        this.ergoNameAvailable = false
+        this.ergoNameUnavailable = true
+      }
     },
     async mintNFT(event) {
       event.preventDefault()
