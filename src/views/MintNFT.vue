@@ -109,7 +109,7 @@ export default {
     async mintNFT(event) {
       event.preventDefault()
       // ================================= Send money ============================
-      const amountToBeSent = 500000000
+      const amountToBeSent = 520000000
       // eslint-disable-next-line
       ergoConnector.nautilus.connect().then(async () => {
           // eslint-disable-next-line
