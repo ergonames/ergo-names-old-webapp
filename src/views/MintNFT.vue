@@ -60,11 +60,6 @@ const ergonamesTxLib = import('ergonames-tx-lib')
 //   )
 // }
 
-async function send(ergonamePrice, ergonameName, recieverAddress) {
-  const lib = await ergonamesTxLib
-  await lib.send_transaction(ergonamePrice, ergonameName, recieverAddress)
-}
-
 export default {
   head() {
     return {
@@ -97,7 +92,9 @@ export default {
     async checkAvailability(event) {
       event.preventDefault()
       // eslint-disable-next-line
-      const resolvedErgoName = await resolve_ergoname(this.form.ergoName)
+      const ergoName = this.form.ergoName
+      console.log(ergoName)
+      const resolvedErgoName = null // await resolve_ergoname(ergoName)
       if (resolvedErgoName == null) {
         this.ergoNameAvailable = true
         this.ergoNameUnavailable = false
@@ -111,14 +108,17 @@ export default {
       // ================================= Send money ============================
       const amountToBeSent = 520000000
       // eslint-disable-next-line
-      ergoConnector.nautilus.connect().then(async () => {
+      const txInfo = await ergoConnector.nautilus.connect().then(async () => {
           // eslint-disable-next-line
-        const addr = ergo.get_change_address()
-          await send(amountToBeSent, this.form.ergoName, addr)
+        const addr = await ergo.get_change_address()
+          // eslint-disable-next-line
+        const txIdBoxId = (await ergonamesTxLib).send_transaction(amountToBeSent, this.form.ergoName, addr).then(data => { return data })
+          return txIdBoxId
         })
         .catch(() => {
           console.log('Cannot send transaction')
         })
+      console.log(txInfo)
     },
     onReset(event) {
       event.preventDefault()

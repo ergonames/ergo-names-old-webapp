@@ -5322,18 +5322,18 @@ ergo-lib-wasm-browser@^0.19.0:
   resolved "https://registry.yarnpkg.com/ergo-lib-wasm-browser/-/ergo-lib-wasm-browser-0.19.0.tgz#7d82bdccda61caf1401d12fc108f1ed68058727c"
   integrity sha512-ZJo/rLVa2FMA/hS1Ckq6uxz3DO9foBuUeUOyVJLgyTGJ4/KeTLjQS3nu6ZmWAyuBIJ2LT6gJtNAj2Y79tmC8mQ==
 
-ergonames-tx-lib@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/ergonames-tx-lib/-/ergonames-tx-lib-0.4.2.tgz#682802a784a7cb5e73139c645a122114b063a5f1"
-  integrity sha512-kOVs8VzTDSJyzDTS7XA6YD2rt/Fi7lHQdHwzx2CYZVvYR22Lx1TdwhcbwkloUWqVK8O3AVQ8fo+dzeHuzUlWcQ==
+ergonames-tx-lib@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/ergonames-tx-lib/-/ergonames-tx-lib-0.4.5.tgz#ffdba55f6296293b8a11ac2b195d85f58b02a3d3"
+  integrity sha512-RcgxfDFUXN81RViXgk8hdddUUziE83azcW+2TBS7RQDocM6d5EXDH5wkYvc8PDo7MICZjqQHLWrGhg2F+mNaMA==
   dependencies:
     ergo-lib-wasm-browser "^0.19.0"
     json-bigint "^1.0.0"
 
-ergonames@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/ergonames/-/ergonames-0.4.4.tgz#64ddbc0d9c7068b3145c8ae1df414453914d01f4"
-  integrity sha512-JloRoCW4xtPjLNpaZF8kPaMYeIB6EtEmpxSJVGO7jX8spR5nN+jWUEQ5RuWsb9sj5SHCQADyHd9sayknD1gS2w==
+ergonames@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/ergonames/-/ergonames-0.4.5.tgz#679dd05a3b30c2cb639e42ff48d75bfa705aaae1"
+  integrity sha512-Y5UwAEhnCA7SBmcrzXQwOfVrYLjUimGzzxITHgS8x5MQ1WJVoXfMQ1Q64/P64gEMS0sadFeWxqHtddTd3TqKxw==
   dependencies:
     axios "^0.27.2"
 
