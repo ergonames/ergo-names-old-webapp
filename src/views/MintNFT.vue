@@ -92,9 +92,9 @@ export default {
     async checkAvailability(event) {
       event.preventDefault()
       // eslint-disable-next-line
-      const ergoName = this.form.ergoName
-      console.log(ergoName)
-      const resolvedErgoName = null // await resolve_ergoname(ergoName)
+      console.log(this.form.ergoName)
+      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then(data => { return data })
+      console.log(resolvedErgoName)
       if (resolvedErgoName == null) {
         this.ergoNameAvailable = true
         this.ergoNameUnavailable = false
