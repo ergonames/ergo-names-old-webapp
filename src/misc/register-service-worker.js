@@ -1,6 +1,6 @@
 import { register } from 'register-service-worker'
 
-import store from '@/store'
+import store from '../store'
 
 if (process.env.NODE_ENV === 'production') {
   register('/service-worker.js', {

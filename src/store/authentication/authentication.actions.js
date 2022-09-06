@@ -1,7 +1,7 @@
 import { isNil } from 'lodash'
-import router from '@/router'
-import { createNewUserFromFirebaseAuthUser } from '@/misc/helpers'
-import UsersDB from '@/firebase/users-db'
+import router from '../../router'
+import { createNewUserFromFirebaseAuthUser } from '../../misc/helpers'
+import UsersDB from '../../firebase/users-db'
 
 export default {
   /**

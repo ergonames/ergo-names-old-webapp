@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Head from 'vue-head'
-import Home from '@/views/Home'
-import MintNFT from '@/views/MintNFT'
-import SendNFT from '@/views/SendNFT'
+import Home from '@/views/Home.vue'
+import MintNFT from '@/views/MintNFT.vue'
+import SendNFT from '@/views/SendNFT.vue'
 
 Vue.use(Router)
 
