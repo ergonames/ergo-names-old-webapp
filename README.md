@@ -1,4 +1,4 @@
-# ergo-names frontend
+# ErgoNames WebApp
 
 ## Build instructions
 
