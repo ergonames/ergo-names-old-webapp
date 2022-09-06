@@ -1,5 +1,7 @@
 # ErgoNames WebApp
 
+Currently pointed at Ergo Bloknet
+
 ## Build instructions
 
 - Install nvm: `brew install nvm`
