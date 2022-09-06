@@ -13,6 +13,7 @@ module.exports = {
         ],
         extensions: ['.vue', '.js', '.json'],
       },
+    },
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx', '.vue'],
   },
   extends: [
