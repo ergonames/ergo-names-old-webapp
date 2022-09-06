@@ -6,7 +6,14 @@ module.exports = {
     jest: true,
   },
   settings: {
-    'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'],
+        ],
+        extensions: ['.vue', '.js', '.json'],
+      },
+    'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx', '.vue'],
   },
   extends: [
     'airbnb-base',
