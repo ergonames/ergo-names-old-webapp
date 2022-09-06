@@ -53,12 +53,12 @@ import { resolve_ergoname } from 'ergonames'
 
 const ergonamesTxLib = import('ergonames-tx-lib')
 
-// function displayTxId(txId) {
-//   // eslint-disable-next-line
-//   alert(
-//     `<a href="https://testnet.ergoplatform.com/en/transactions/${txId}" target='_blank'> Transaction on the explorer</a>`
-//   )
-// }
+function displayTxId(txId) {
+  // eslint-disable-next-line
+  alert(
+    `http://69.164.215.107:3000/en/transactions/${txId}`
+  )
+}
 
 export default {
   head() {
@@ -93,7 +93,7 @@ export default {
       event.preventDefault()
       // eslint-disable-next-line
       console.log(this.form.ergoName)
-      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then(data => { return data })
+      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then((data) => { return data })
       console.log(resolvedErgoName)
       if (resolvedErgoName == null) {
         this.ergoNameAvailable = true
@@ -119,6 +119,7 @@ export default {
           console.log('Cannot send transaction')
         })
       console.log(txInfo)
+      displayTxId(txInfo[0])
     },
     onReset(event) {
       event.preventDefault()

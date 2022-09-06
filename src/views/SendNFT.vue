@@ -126,7 +126,6 @@ export default {
         .catch((error) => {
           console.error('There was an error!', error)
           // eslint-disable-next-line
-          alert('Oops, we encountered an unexpected issue.')
           this.ergoNameAvailable = false
           this.ergoNameUnavailable = false
         })
@@ -134,7 +133,6 @@ export default {
     sendAsset(event) {
       event.preventDefault()
       // eslint-disable-next-line
-      alert(JSON.stringify(this.form))
       // AJAX Call
       this.assetTransmissionSuccessful = true
       this.assetTransmissionFailure = false

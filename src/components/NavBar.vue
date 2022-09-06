@@ -48,7 +48,6 @@ export default {
       ergoConnector.nautilus.connect().then((success) => {
         if (success) {
           // eslint-disable-next-line
-          alert('Wallet successfully connected')
           this.walletConnected = true
           // eslint-disable-next-line
           ergo.get_balance().then(bal => {
@@ -56,7 +55,6 @@ export default {
           })
         } else {
           // eslint-disable-next-line
-          alert('Wallet connection failed')
           this.walletConnected = false
         }
       })
