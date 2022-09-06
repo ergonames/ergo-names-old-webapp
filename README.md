@@ -1,4 +1,4 @@
-# ErgoNames WebApp
+# ErgoNames Webapp
 
 Currently pointed at Ergo Bloknet
 
