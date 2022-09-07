@@ -53,13 +53,6 @@ import { resolve_ergoname } from 'ergonames'
 
 const ergonamesTxLib = import('ergonames-tx-lib')
 
-function displayTxId(txId) {
-  // eslint-disable-next-line
-  alert(
-    `http://69.164.215.107:3000/en/transactions/${txId}`
-  )
-}
-
 export default {
   head() {
     return {
@@ -119,7 +112,16 @@ export default {
           console.log('Cannot send transaction')
         })
       console.log(txInfo)
-      displayTxId(txInfo[0])
+      this.alertDisplay(txInfo[0])
+    },
+    alertDisplay(txId) {
+      // eslint-disable-next-line
+      this.$swal({
+        title: 'Transaction ID',
+        text: txId,
+        icon: 'success',
+        confirmButtonText: 'OK',
+      })
     },
     onReset(event) {
       event.preventDefault()
