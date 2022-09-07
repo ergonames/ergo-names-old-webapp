@@ -116,9 +116,10 @@ export default {
     },
     alertDisplay(txId) {
       // eslint-disable-next-line
+      let explorerLink = 'http://69.164.215.107:3000/en/transactions/' + txId
       this.$swal({
         title: 'Transaction ID',
-        text: txId,
+        html: `<a href=${explorerLink}>${txId}</a>`,
         icon: 'success',
         confirmButtonText: 'OK',
       })
