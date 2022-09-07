@@ -17,7 +17,7 @@
     <br />
     <div>
       <b
-        >To use the "connect wallet" feature, please install Yoroi Nightly
+        >To use the "connect wallet" feature, please install Nautilus
         wallet and connect your ERG wallet there.</b
       >
     </div>
