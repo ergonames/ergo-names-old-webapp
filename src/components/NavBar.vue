@@ -111,7 +111,7 @@ export default {
   .site-name {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #d33b19;
+    color: $vue-color;
     position: relative;
   }
 

@@ -52,7 +52,7 @@ export default {
   background-color: black;
 
   .title {
-    color: rgb(226, 74, 31);
+    color: $vue-color;
     font-size: 100px;
     padding-top: 25px;
     font-weight: bolder;

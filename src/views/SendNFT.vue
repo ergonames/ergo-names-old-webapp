@@ -204,7 +204,7 @@ export default {
   }
 
   .wallet-link:hover {
-    color: rgb(202, 73, 13);
+    color: $vue-color;
   }
 }
 </style>
