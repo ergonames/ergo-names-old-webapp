@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper">
     <h1 class="home-page-title">{{ appTitle }}</h1>
-    <h3>Mint your ergo-names NFT</h3>
+    <h3 class="page-header">Mint your ErgoNames NFT</h3>
 
     <br />
     <div>
@@ -38,8 +38,8 @@
         Oh no, minting of ErgoName {{ form.ergoName }} was unsuccessful. <br />
         Please try again later.
       </p>
-      <b
-        >To use the "connect wallet" feature, please install Nautilus Testnet
+      <b class="wallet-directions"
+        >To use the "connect wallet" feature, please install <a class="wallet-link" href="https://github.com/ergonames/nautilus-bloknet">Nautilus Bloknet</a>
         wallet and connect your ERG wallet there.</b
       >
     </div>
@@ -154,6 +154,10 @@ export default {
   justify-content: center;
   align-items: center;
 
+  .page-header {
+    color: white;
+  }
+
   .logo {
     margin-bottom: 3rem;
   }
@@ -174,6 +178,18 @@ export default {
     text-decoration: none;
     width: fit-content;
     font-weight: 500;
+  }
+
+  .wallet-directions {
+    color: white;
+  }
+
+  .wallet-link {
+    color: rgb(166, 166, 166);
+  }
+
+  .wallet-link:hover {
+    color: rgb(202, 73, 13);
   }
 }
 </style>
