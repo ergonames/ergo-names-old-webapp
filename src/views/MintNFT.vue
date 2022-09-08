@@ -56,7 +56,9 @@ export default {
   head() {
     return {
       title: {
-        inner: 'Mint ergo-names NFT',
+        inner: 'Mint',
+        separator: ' |  ',
+        complement: 'ErgoNames',
       },
       meta: [
         {

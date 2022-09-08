@@ -27,6 +27,8 @@ export default {
     return {
       title: {
         inner: 'Home',
+        separator: ' |  ',
+        complement: 'ErgoNames',
       },
       meta: [
         {

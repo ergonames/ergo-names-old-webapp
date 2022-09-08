@@ -69,7 +69,9 @@ export default {
   head() {
     return {
       title: {
-        inner: 'Send to NFT owner',
+        inner: 'Send',
+        separator: ' |  ',
+        complement: 'ErgoNames',
       },
       meta: [
         {
