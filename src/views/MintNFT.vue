@@ -1,6 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <h1 class="home-page-title">{{ appTitle }}</h1>
     <h3 class="page-header">Mint your ErgoNames NFT</h3>
 
     <br />
