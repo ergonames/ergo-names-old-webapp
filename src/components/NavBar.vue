@@ -1,14 +1,14 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/ergoname-dark.png" />
-      <span class="site-name title-desktop">{{ appTitle }}</span>
-      <span class="site-name title-mobile">{{ appShortTitle }}</span>
+      <img alt="logo-bento" class="logo" src="@/assets/logo_256x256.jpg" />
+      <span class="site-name title-desktop">ErgoNames</span>
+      <span class="site-name title-mobile">ErgoNames</span>
     </router-link>
     <div class="links">
       <nav class="nav-links">
         <div class="nav-item">
-          <router-link to="/mint">Mint ergo-names NFT</router-link>
+          <router-link to="/mint">Mint ErgoNames NFT</router-link>
         </div>
         <div class="nav-item">
           <router-link to="/send">Send to NFT owner</router-link>
@@ -75,7 +75,7 @@ export default {
   height: $navbar-height;
   background-color: $navbar-color;
   box-sizing: border-box;
-  border-bottom: 1px solid #eaecef;
+  border-bottom: 1px solid #a7a7a7;
   padding: 0.7rem 1.5rem;
   line-height: 2.2rem;
 
@@ -111,7 +111,7 @@ export default {
   .site-name {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: $vue-color;
     position: relative;
   }
 

@@ -1,26 +1,21 @@
 <template>
   <div class="page-wrapper">
+    <h1 class="title">ErgoNames</h1>
     <img
       alt="logo-ergonames"
       width="500"
       class="logo"
-      src="@/assets/ergoname-light.png"
+      src="@/assets/logo_1000x1000.jpeg"
     />
 
     <router-link to="/mint">
-      <b-button pill variant="primary">Mint ergo-names NFT →</b-button>
+      <b-button pill variant="primary">Mint ErgoNames NFT →</b-button>
     </router-link>
     <br />
     <router-link to="/send">
-      <b-button pill variant="primary">Send to ergo-names NFT owner →</b-button>
+      <b-button pill variant="primary">Send to ErgoNames NFT owner →</b-button>
     </router-link>
     <br />
-    <div>
-      <b
-        >To use the "connect wallet" feature, please install Nautilus
-        wallet and connect your ERG wallet there.</b
-      >
-    </div>
   </div>
 </template>
 
@@ -32,6 +27,8 @@ export default {
     return {
       title: {
         inner: 'Home',
+        separator: ' |  ',
+        complement: 'ErgoNames',
       },
       meta: [
         {
@@ -54,6 +51,14 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+
+  .title {
+    color: $vue-color;
+    font-size: 100px;
+    padding-top: 25px;
+    font-weight: bolder;
+  }
 
   .logo {
     margin-bottom: 3rem;
