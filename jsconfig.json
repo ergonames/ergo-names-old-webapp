@@ -1,4 +1,3 @@
-// VSCode configuration providing help with aliases
 {
   "compilerOptions": {
     "baseUrl": ".",
