@@ -100,7 +100,7 @@ export default {
     async mintNFT(event) {
       event.preventDefault()
       // ================================= Send money ============================
-      const amountToBeSent = 520000000
+      const amountToBeSent = 3000000
       // eslint-disable-next-line
       const txInfo = await ergoConnector.nautilus.connect().then(async () => {
           // eslint-disable-next-line
@@ -117,7 +117,7 @@ export default {
     },
     alertDisplay(txId) {
       // eslint-disable-next-line
-      let explorerLink = 'http://69.164.215.107:3000/en/transactions/' + txId
+      let explorerLink = 'https://explorer.ergoplatform.com/en/transactions/' + txId
       this.$swal({
         title: 'Transaction ID',
         html: `<a href=${explorerLink}>${txId}</a>`,
