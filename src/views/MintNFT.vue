@@ -49,7 +49,9 @@
 import { mapState } from 'vuex'
 // eslint-disable-next-line
 import { resolve_ergoname } from 'ergonames'
+import axios from 'axios'
 
+// eslint-disable-next-line
 const ergonamesTxLib = import('ergonames-tx-lib')
 
 export default {
@@ -100,20 +102,47 @@ export default {
     async mintNFT(event) {
       event.preventDefault()
       // ================================= Send money ============================
+
+      // eslint-disable-next-line
       const amountToBeSent = 3000000
       // eslint-disable-next-line
       const txInfo = await ergoConnector.nautilus.connect().then(async () => {
           // eslint-disable-next-line
-        const addr = await ergo.get_change_address()
+          const addr = await ergo.get_change_address()
           // eslint-disable-next-line
-        const txIdBoxId = (await ergonamesTxLib).send_transaction(amountToBeSent, this.form.ergoName, addr).then(data => { return data })
+          const txIdBoxId = (await ergonamesTxLib).send_transaction(amountToBeSent, this.form.ergoName, addr).then(data => { return data })
           return txIdBoxId
         })
-        .catch(() => {
-          console.log('Cannot send transaction')
+        // console log error
+        .catch((error) => {
+          console.log("Cannot send transaction")
+          console.log(error)
         })
       console.log(txInfo)
-      this.alertDisplay(txInfo[0])
+      const apiUrl = process.env.VUE_APP_API_REQUEST_URL
+      axios
+        .post(
+          apiUrl,
+          {
+            paymentTxId: txInfo[0],
+            mintingRequestBoxId: txInfo[1],
+          },
+          {
+            headers:
+            {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin':'*',
+              'Access-Control-Allow-Headers':'*',
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+      // this.alertDisplay(txInfo[0])
     },
     alertDisplay(txId) {
       // eslint-disable-next-line
