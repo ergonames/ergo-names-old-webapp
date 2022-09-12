@@ -54,8 +54,9 @@
         {{ form.ergoName }}. <br />
         Please try again later.
       </p>
+      // eslint-disable-next-line
       <b class="wallet-directions"
-        >To use the "connect wallet" feature, please install <a class="wallet-link" href="https://github.com/ergonames/nautilus-bloknet">Nautilus Bloknet</a>
+        >To use the "connect wallet" feature, please install <a class="wallet-link" href="https://github.com/capt-nemo429/nautilus-wallet">Nautilus</a>
         wallet and connect your ERG wallet there.</b
       >
     </div>

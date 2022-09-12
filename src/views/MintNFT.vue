@@ -37,10 +37,10 @@
         Oh no, minting of ErgoName {{ form.ergoName }} was unsuccessful. <br />
         Please try again later.
       </p>
-      <b class="wallet-directions"
-        >To use the "connect wallet" feature, please install <a class="wallet-link" href="https://github.com/ergonames/nautilus-bloknet">Nautilus Bloknet</a>
-        wallet and connect your ERG wallet there.</b
-      >
+      <b class="wallet-directions">
+        To use the "connect wallet" feature, please install<a class="wallet-link" href="https://github.com/capt-nemo429/nautilus-wallet">Nautilus</a>
+        wallet and connect your ERG wallet there.
+      </b>
     </div>
   </div>
 </template>
@@ -89,7 +89,7 @@ export default {
       event.preventDefault()
       // eslint-disable-next-line
       console.log(this.form.ergoName)
-      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then((data) => { return data })
+      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then((data) => {return data })
       console.log(resolvedErgoName)
       if (resolvedErgoName == null) {
         this.ergoNameAvailable = true
@@ -115,7 +115,7 @@ export default {
         })
         // console log error
         .catch((error) => {
-          console.log("Cannot send transaction")
+          console.log('Cannot send transaction')
           console.log(error)
         })
       console.log(txInfo)
