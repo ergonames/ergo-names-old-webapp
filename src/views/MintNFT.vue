@@ -142,7 +142,7 @@ export default {
         .catch((error) => {
           console.log(error)
         })
-      // this.alertDisplay(txInfo[0])
+      this.alertDisplay(txInfo[0])
     },
     alertDisplay(txId) {
       // eslint-disable-next-line
