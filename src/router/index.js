@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Head from 'vue-head'
 import Home from '@/views/Home.vue'
 import MintNFT from '@/views/MintNFT.vue'
-import SendNFT from '@/views/SendNFT.vue'
+import ResolveNFT from '@/views/ResolveNFT.vue'
 
 Vue.use(Router)
 
@@ -28,9 +28,9 @@ const router = new Router({
       },
     },
     {
-      path: '/send',
-      name: 'send',
-      component: SendNFT,
+      path: '/resolve',
+      name: 'resolve',
+      component: ResolveNFT,
       meta: {
         authNotRequired: true,
       },

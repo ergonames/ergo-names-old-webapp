@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <h3 class="page-header">Send to ErgoNames NFT owner</h3>
+    <h3 class="page-header">Resolve an ErgoName NFT</h3>
 
     <br />
     <div>
@@ -8,7 +8,7 @@
         <b-form-input
           id="input-1"
           v-model="form.ergoName"
-          placeholder="Enter ErgoName ID to check ownership"
+          placeholder="Enter ErgoName ID to resolve"
           required
         ></b-form-input>
         <br />
@@ -64,6 +64,8 @@
 
 <script>
 import { mapState } from 'vuex'
+// eslint-disable-next-line
+import { resolve_ergoname } from 'ergonames'
 
 export default {
   head() {
@@ -99,37 +101,19 @@ export default {
   },
   computed: mapState('app', ['appTitle']),
   methods: {
-    resolveErgoName(event) {
+    async resolveErgoName(event) {
       event.preventDefault()
-      fetch(
-        `https://testnet-api.ergonames.com/ergonames/resolve/${this.form.ergoName}`
-      )
-        .then(async (response) => {
-          const data = await response.json()
+      const resolvedErgoName = await resolve_ergoname(this.form.ergoName).then((data) => {return data })
 
-          // check for error response
-          if (!response.ok) {
-            // get error message from body or default to response statusText
-            const error = (data && data.message) || response.statusText
-            return Promise.reject(error)
-          }
-
-          this.NFTAddress = data.ergo
-          if (data.ergo != null) {
-            this.ergoNameFound = true
-            this.ergoNameNotFound = false
-          } else {
-            this.ergoNameFound = false
-            this.ergoNameNotFound = true
-          }
-          return null
-        })
-        .catch((error) => {
-          console.error('There was an error!', error)
-          // eslint-disable-next-line
-          this.ergoNameAvailable = false
-          this.ergoNameUnavailable = false
-        })
+      this.NFTAddress = resolvedErgoName
+        if (this.NFTAddress != null) {
+          this.ergoNameFound = true
+          this.ergoNameNotFound = false
+        } else {
+          this.ergoNameFound = false
+          this.ergoNameNotFound = true
+        }
+        console.log(this.NFTAddress)
     },
     sendAsset(event) {
       event.preventDefault()

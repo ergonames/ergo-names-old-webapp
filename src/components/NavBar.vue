@@ -11,7 +11,7 @@
           <router-link to="/mint">Mint ErgoNames NFT</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/send">Send to NFT owner</router-link>
+          <router-link to="/resolve">Resolve ErgoNames NFT</router-link>
         </div>
         <div v-if="!walletConnected" class="nav-item" @click="connectWallet">
           <b-button variant="primary">Connect wallet</b-button>
