@@ -120,6 +120,7 @@ export default {
         })
       console.log(txInfo)
       const apiUrl = process.env.VUE_APP_API_REQUEST_URL
+      console.log(apiUrl)
       axios
         .post(
           apiUrl,
@@ -146,7 +147,7 @@ export default {
     },
     alertDisplay(txId) {
       // eslint-disable-next-line
-      let explorerLink = 'https://explorer.ergoplatform.com/en/transactions/' + txId
+      let explorerLink = 'https://testnet.ergoplatform.com/en/transactions/' + txId
       this.$swal({
         title: 'Transaction ID',
         html: `<a href=${explorerLink}>${txId}</a>`,
